@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <style>
+
+        html {
+          height: 100%;
+          width: 100%;
+          background: linear-gradient(-45deg, #008448 0%, #000000 33%, #000000 72%, #FFD22F 100%);
+
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+
+        }
+        .faq {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            background-color: #fff;
+        }
+        .faq-question {
+            padding: 15px;
+            margin: 0;
+            cursor: pointer;
+            background-color: #1A945C;
+            color: #fff;
+            font-weight: bold;
+        }
+        .faq-answer {
+            padding: 15px;
+            display: none;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="faq">
+        <div class="faq-item">
+            <div class="faq-question">1) Sua Viagem</div>
+            <div class="faq-answer">2 Cents para ajudar você na programação da viagem, lembre-se de checar: </br></br>
+
+              - Horário e origem/destino de suas passagens, seja de ônibus ou avião, confira. </br>
+              - Chegue com antecedência na rodoviária/aeroporto. </br>
+              - Tenha o cartão de embarque com fácil acesso. Salve tbm offline, pro caso de faltar internet. </br>
+              - Dá um confere se está com seus documentos na carteira, antes de sair de casa. Imprescindível portar um documento original com foto, tanto para a viagem quanto para acessar o evento.  </br>
+            </br>
+              - Data de check in e check out da sua hospedagem. Checkin a partir do dia 20/01 às 11h e check out no dia 27/01 até 12h. </br></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">2) Itens que vão ajudar você durante o evento</div>
+            <div class="faq-answer">-Carregador de celular, fonte do notebook, powerbank, garrafinha de água, casaco, kit remédios… eventualmente precisará de um ou de todos os itens em algum dia… não esqueça de colocá-los na mala!</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">3) Como vai funcionar a Hospedagem?</div>
+            <div class="faq-answer">Para quem vem de fora, reservamos nossa tradicional “Casa do Lago”, para recebê-los no estilo de cartão postal da City :) </br>
+            </br>
+              <b>Check-in:</b> dia 20/01 a partir de 11h00</br>
+              <b>Check-out:</b> dia 27/01 até 12h</br>
+            </br>
+              <b>Casa 1:</b> Natalia </br>
+              <b>Casa 2:</b> Artur, Luizinho, Maia, Max, Edu, Victão, Isaque  </br>
+              </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">4) Quem é de Londrina, poderá dormir nas casas reservadas?</div>
+          <div class="faq-answer">
+            Somente mulheres nas noites entre  24 e 26. Vagas limitadas: teremos algumas camas disponíveis para acomodar mulheres de Londrina na Casa 1, caso alguma prefira ficar por lá durante o Hackathon :)  
+          </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const isVisible = answer.style.display === 'block';
+
+                    // Hide all answers
+                    document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+
+                    // Toggle current answer
+                    if (!isVisible) {
+                        answer.style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
